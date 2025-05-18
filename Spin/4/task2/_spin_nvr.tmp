@@ -1,0 +1,9 @@
+never p1 {    /* !([] (! (done))) */
+T0_init:
+	do
+	:: atomic { (! ((! (done)))) -> assert(!(! ((! (done))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
