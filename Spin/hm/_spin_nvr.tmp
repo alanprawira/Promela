@@ -1,0 +1,213 @@
+never s1 {    /* !([] (! (((statuses[0]==1)) && ((statuses[2]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[0]==1)) && ((statuses[2]==1)))))) -> assert(!(! ((! (((statuses[0]==1)) && ((statuses[2]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s2 {    /* !([] (! (((statuses[0]==1)) && ((statuses[4]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[0]==1)) && ((statuses[4]==1)))))) -> assert(!(! ((! (((statuses[0]==1)) && ((statuses[4]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s3 {    /* !([] (! (((statuses[0]==1)) && ((statuses[3]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[0]==1)) && ((statuses[3]==1)))))) -> assert(!(! ((! (((statuses[0]==1)) && ((statuses[3]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s4 {    /* !([] (! (((statuses[0]==1)) && ((statuses[5]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[0]==1)) && ((statuses[5]==1)))))) -> assert(!(! ((! (((statuses[0]==1)) && ((statuses[5]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s5 {    /* !([] (! (((statuses[1]==1)) && ((statuses[2]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[1]==1)) && ((statuses[2]==1)))))) -> assert(!(! ((! (((statuses[1]==1)) && ((statuses[2]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s6 {    /* !([] (! (((statuses[1]==1)) && ((statuses[3]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[1]==1)) && ((statuses[3]==1)))))) -> assert(!(! ((! (((statuses[1]==1)) && ((statuses[3]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s7 {    /* !([] (! (((statuses[1]==1)) && ((statuses[5]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[1]==1)) && ((statuses[5]==1)))))) -> assert(!(! ((! (((statuses[1]==1)) && ((statuses[5]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s8 {    /* !([] (! (((statuses[2]==1)) && ((statuses[3]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[2]==1)) && ((statuses[3]==1)))))) -> assert(!(! ((! (((statuses[2]==1)) && ((statuses[3]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never s9 {    /* !([] (! (((statuses[2]==1)) && ((statuses[4]==1))))) */
+T0_init:
+	do
+	:: atomic { (! ((! (((statuses[2]==1)) && ((statuses[4]==1)))))) -> assert(!(! ((! (((statuses[2]==1)) && ((statuses[4]==1))))))) }
+	:: (1) -> goto T0_init
+	od;
+accept_all:
+	skip
+}
+never l1 {    /* !([] ((! (((queue[0]==1)) && ((statuses[0]==0)))) || (<> ((statuses[0]==1))))) */
+T0_init:
+	do
+	:: (! ((! (((queue[0]==1)) && ((statuses[0]==0))))) && ! (((statuses[0]==1)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[0]==1)))) -> goto accept_S4
+	od;
+}
+never l2 {    /* !([] ((! (((queue[1]==1)) && ((statuses[1]==0)))) || (<> ((statuses[1]==1))))) */
+T0_init:
+	do
+	:: (! ((! (((queue[1]==1)) && ((statuses[1]==0))))) && ! (((statuses[1]==1)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[1]==1)))) -> goto accept_S4
+	od;
+}
+never l3 {    /* !([] ((! (((queue[2]==1)) && ((statuses[2]==0)))) || (<> ((statuses[2]==1))))) */
+T0_init:
+	do
+	:: (! ((! (((queue[2]==1)) && ((statuses[2]==0))))) && ! (((statuses[2]==1)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[2]==1)))) -> goto accept_S4
+	od;
+}
+never l4 {    /* !([] ((! (((queue[3]==1)) && ((statuses[3]==0)))) || (<> ((statuses[3]==1))))) */
+T0_init:
+	do
+	:: (! ((! (((queue[3]==1)) && ((statuses[3]==0))))) && ! (((statuses[3]==1)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[3]==1)))) -> goto accept_S4
+	od;
+}
+never l5 {    /* !([] ((! (((queue[4]==1)) && ((statuses[4]==0)))) || (<> ((statuses[4]==1))))) */
+T0_init:
+	do
+	:: (! ((! (((queue[4]==1)) && ((statuses[4]==0))))) && ! (((statuses[4]==1)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[4]==1)))) -> goto accept_S4
+	od;
+}
+never l6 {    /* !([] ((! (((queue[5]==1)) && ((statuses[5]==0)))) || (<> ((statuses[5]==1))))) */
+T0_init:
+	do
+	:: (! ((! (((queue[5]==1)) && ((statuses[5]==0))))) && ! (((statuses[5]==1)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[5]==1)))) -> goto accept_S4
+	od;
+}
+never f1 {    /* !([] (<> ((statuses[0]==0)))) */
+T0_init:
+	do
+	:: (! (((statuses[0]==0)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[0]==0)))) -> goto accept_S4
+	od;
+}
+never f2 {    /* !([] (<> ((statuses[1]==0)))) */
+T0_init:
+	do
+	:: (! (((statuses[1]==0)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[1]==0)))) -> goto accept_S4
+	od;
+}
+never f3 {    /* !([] (<> ((statuses[2]==0)))) */
+T0_init:
+	do
+	:: (! (((statuses[2]==0)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[2]==0)))) -> goto accept_S4
+	od;
+}
+never f4 {    /* !([] (<> ((statuses[3]==0)))) */
+T0_init:
+	do
+	:: (! (((statuses[3]==0)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[3]==0)))) -> goto accept_S4
+	od;
+}
+never f5 {    /* !([] (<> ((statuses[4]==0)))) */
+T0_init:
+	do
+	:: (! (((statuses[4]==0)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[4]==0)))) -> goto accept_S4
+	od;
+}
+never f6 {    /* !([] (<> ((statuses[5]==0)))) */
+T0_init:
+	do
+	:: (! (((statuses[5]==0)))) -> goto accept_S4
+	:: (1) -> goto T0_init
+	od;
+accept_S4:
+	do
+	:: (! (((statuses[5]==0)))) -> goto accept_S4
+	od;
+}
